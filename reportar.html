@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulario para reportar animales en situación de riesgo">
+    <title>Reportar animal - Sistema de Rescate Animal</title>
+</head>
+<body>
+
+    <header>
+        <h1>Reporte de animales</h1>
+        <p>Registra animales que necesiten ayuda o protección.</p>
+    </header>
+
+    <nav aria-label="Navegación principal">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="reportar.html">Reportar un animal</a></li>
+            <li><a href="rescate.html">Gestión de rescates</a></li>
+        </ul>
+    </nav>
+
+    <main id="contenido">
+        <section>
+            <h2>Formulario de reporte</h2>
+
+            <form action="#" method="get">
+                <fieldset>
+                    <legend>Datos de la persona que reporta</legend>
+
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+
+                    <br><br>
+
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+
+                    <br><br>
+
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Información del animal</legend>
+
+                    <label for="especie">Especie:</label>
+                    <select id="especie" name="especie" required>
+                        <option value="">Seleccione</option>
+                        <option value="perro">Perro</option>
+                        <option value="gato">Gato</option>
+                        <option value="ave">Ave</option>
+                        <option value="otro">Otro</option>
+                    </select>
+
+                    <br><br>
+
+                    <label for="estado">Situación del animal:</label>
+                    <select id="estado" name="estado" required>
+                        <option value="">Seleccione</option>
+                        <option value="abandonado">Abandonado</option>
+                        <option value="herido">Herido</option>
+                        <option value="perdido">Perdido</option>
+                        <option value="maltrato">Posible maltrato</option>
+                    </select>
+
+                    <br><br>
+
+                    <label for="ubicacion">Ubicación:</label>
+                    <input type="text" id="ubicacion" name="ubicacion" required>
+
+                    <br><br>
+
+                    <label for="descripcion">Descripción del caso:</label>
+                    <textarea id="descripcion" name="descripcion" rows="5" required></textarea>
+                </fieldset>
+
+                <button type="submit">Enviar reporte</button>
+                <button type="reset">Limpiar formulario</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Proyecto académico - 2026</p>
+        <a href="index.html">Volver al inicio</a>
+    </footer>
+
+</body>
+</html>
