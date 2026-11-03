@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gestión y seguimiento de animales rescatados">
+    <title>Gestión de rescates - Sistema de Rescate Animal</title>
+</head>
+<body>
+
+    <header>
+        <h1>Gestión de rescates y atención veterinaria</h1>
+        <p>Registro y seguimiento de animales rescatados.</p>
+    </header>
+
+    <nav aria-label="Navegación principal">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="reportar.html">Reportar un animal</a></li>
+            <li><a href="rescates.html">Gestión de rescates</a></li>
+        </ul>
+    </nav>
+
+    <main id="contenido">
+
+    <section>
+        <h2>Registro de animales rescatados</h2>
+        <article>
+            <h3>Listado de animales atendidos</h3>
+            
+            <table>
+                <caption>Listado de animales atendidos</caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Código</th>
+                        <th scope="col">Especie</th>
+                        <th scope="col">Condición</th>
+                        <th scope="col">Ubicación</th>
+                        <th scope="col">Estado del rescate</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>Perro</td>
+                        <td>Herido</td>
+                        <td>Portoviejo</td>
+                        <td>Rescatado</td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>Gato</td>
+                        <td>Abandonado</td>
+                        <td>Manta</td>
+                        <td>En atención</td>
+                    </tr>
+                    <tr>
+                        <td>003</td>
+                        <td>Ave</td>
+                        <td>Herida</td>
+                        <td>Chone</td>
+                        <td>En recuperación</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+    </section>
+
+    <section>
+        <h2>Formulario de registro de rescate</h2>
+        <article>
+            <h3>Datos del nuevo rescate</h3>
+
+            <form action="#" method="get">
+                <fieldset>
+                    <legend>Datos del rescate</legend>
+
+                    <label for="codigo-rescate">Código del rescate:</label>
+                    <input type="text" id="codigo-rescate"
+                           name="codigo-rescate"
+                           minlength="3" maxlength="10" required>
+
+                    <br><br>
+
+                    <label for="fecha-rescate">Fecha del rescate:</label>
+                    <input type="date" id="fecha-rescate"
+                           name="fecha-rescate" required>
+
+                    <br><br>
+
+                    <label for="especie-rescate">Especie del animal:</label>
+                    <select id="especie-rescate"
+                            name="especie-rescate" required>
+                        <option value="">Seleccione una especie</option>
+                        <option value="perro">Perro</option>
+                        <option value="gato">Gato</option>
+                        <option value="ave">Ave</option>
+                        <option value="otro">Otro</option>
+                    </select>
+
+                    <br><br>
+
+                    <label for="ubicacion-rescate">Lugar del rescate:</label>
+                    <input type="text" id="ubicacion-rescate"
+                           name="ubicacion-rescate"
+                           minlength="3" required>
+
+                    <br><br>
+
+                    <label for="responsable">Responsable del rescate:</label>
+                    <input type="text" id="responsable"
+                           name="responsable"
+                           minlength="3" required>
+
+                    <br><br>
+
+                    <label for="descripcion-rescate">Descripción del rescate:</label>
+                    <textarea id="descripcion-rescate"
+                              name="descripcion-rescate"
+                              rows="4" minlength="10" required></textarea>
+
+                    <br><br>
+
+                    <label for="estado-rescate">Estado del rescate:</label>
+                    <select id="estado-rescate"
+                            name="estado-rescate" required>
+                        <option value="">Seleccione un estado</option>
+                        <option value="pendiente">Pendiente</option>
+                        <option value="rescatado">Rescatado</option>
+                        <option value="atencion">En atención veterinaria</option>
+                        <option value="recuperacion">En recuperación</option>
+                    </select>
+                </fieldset>
+
+                <button type="submit">Registrar rescate</button>
+                <button type="reset">Limpiar formulario</button>
+            </form>
+        </article>
+    </section>
+
+    <section>
+        <h2>Atención veterinaria</h2>
+        <article>
+            <h3>Registro de atención veterinaria</h3>
+
+            <form action="#" method="get">
+                <fieldset>
+                    <legend>Datos de atención</legend>
+
+                    <label for="codigo">Código del animal:</label>
+                    <input type="text" id="codigo" name="codigo" required>
+
+                    <br><br>
+
+                    <label for="veterinario">Nombre del veterinario:</label>
+                    <input type="text" id="veterinario"
+                           name="veterinario" required>
+
+                    <br><br>
+
+                    <label for="fecha">Fecha de atención:</label>
+                    <input type="date" id="fecha" name="fecha" required>
+
+                    <br><br>
+
+                    <label for="tratamiento">Tratamiento realizado:</label>
+                    <textarea id="tratamiento" name="tratamiento"
+                              rows="4" required></textarea>
+
+                    <br><br>
+
+                    <label for="observaciones">Observaciones:</label>
+                    <textarea id="observaciones" name="observaciones"
+                              rows="4"></textarea>
+
+                    <br><br>
+
+                    <label for="estado">Estado actual del animal:</label>
+                    <select id="estado" name="estado" required>
+                        <option value="">Seleccione</option>
+                        <option value="estable">Estable</option>
+                        <option value="recuperacion">En recuperación</option>
+                        <option value="adopcion">Disponible para adopción</option>
+                    </select>
+                </fieldset>
+
+                <button type="submit">Registrar atención</button>
+                <button type="reset">Limpiar formulario</button>
+            </form>
+        </article>
+    </section>
+
+</main>
+    <footer>
+        <p>Sistema de Control de Rescate y Adopción Animal</p>
+        <p>Proyecto académico - 2026</p>
+        <a href="index.html">Volver al inicio</a>
+    </footer>
+
+</body>
+</html>

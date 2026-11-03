@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulario para reportar animales en situación de riesgo">
+    <title>Reportar animal - Sistema de Rescate Animal</title>
+</head>
+<body>
+
+    <header>
+        <h1>Reporte de animales</h1>
+        <p>Registra animales que necesiten ayuda o protección.</p>
+    </header>
+
+    <nav aria-label="Navegación principal">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="reportar.html">Reportar un animal</a></li>
+            <li><a href="rescates.html">Gestión de rescates</a></li>
+        </ul>
+    </nav>
+
+    <main id="contenido">
+
+    <section>
+    <h2>Formulario para reportar un animal rescatado</h2>
+
+    <article>
+        <h3>Datos del reporte de rescate</h3>
+            <p>Registre la información del animal encontrado o rescatado para facilitar su atención.</p>
+
+            <form action="#" method="get">
+                <fieldset>
+                    <legend>Datos de la persona que reporta</legend>
+
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+
+                    <br><br>
+
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+
+                    <br><br>
+
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Información del animal</legend>
+
+                    <label for="especie">Categoría del animal:</label>
+<select id="especie" name="especie" required>
+    <option value="">Seleccione</option>
+    <option value="perro">Perros</option>
+    <option value="gato">Gatos</option>
+    <option value="conejo">Conejo</option>
+    <option value="caballo">Caballo</option>
+    <option value="obeja">Obeja</option>
+    <option value="burro">Burro</option>
+    <option value="llama">Llama</option>
+    <option value="fauna_silvestre">Fauna silvestre</option>
+</select>
+
+<br><br>
+
+                    <label for="estado">Situación del animal:</label>
+                    <select id="estado" name="estado" required>
+                        <option value="">Seleccione</option>
+                        <option value="abandonado">Abandonado</option>
+                        <option value="herido">Herido</option>
+                        <option value="perdido">Perdido</option>
+                        <option value="maltrato">Posible maltrato</option>
+                    </select>
+
+                    <br><br>
+
+<fieldset>
+
+    <legend>Nivel de urgencia médica:</legend>
+
+    <input type="radio" id="alta" name="urgencia" value="alta" required>
+    <label for="alta">Alta</label>
+
+    <input type="radio" id="media" name="urgencia" value="media">
+    <label for="media">Media</label>
+
+    <input type="radio" id="baja" name="urgencia" value="baja">
+    <label for="baja">Baja</label>
+
+</fieldset>
+
+<br><br>
+
+<label for="ubicacion">Ubicación:</label>
+<input type="text" id="ubicacion" name="ubicacion" required>
+
+<br><br>
+
+<label for="descripcion">Descripción del caso:</label>
+<textarea id="descripcion" name="descripcion" rows="5" required></textarea>
+
+<br><br>
+
+</fieldset>
+
+<button type="submit">Enviar reporte</button>
+<button type="reset">Limpiar formulario</button>
+</form>
+</article>
+</section>
+</main>
+
+    <footer>
+        <p>Proyecto académico - 2026</p>
+        <a href="index.html">Volver al inicio</a>
+    </footer>
+
+</body>
+</html>
